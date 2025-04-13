@@ -1,0 +1,56 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Heading -->
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pratikraman"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:padding="8dp"/>
+
+        <!-- First Video -->
+        <WebView
+            android:id="@+id/videoWebView1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:ignore="WebViewLayout" />
+
+        <!-- Second Video -->
+        <WebView
+            android:id="@+id/videoWebView2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            tools:ignore="WebViewLayout" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="प्रतिक्रमण आत्मा की शुद्धि के लिए किया जाने वाला एक महत्वपूर्ण जैन धार्मिक अनुष्ठान है। इसमें दिन भर किए गए पापों का पश्चाताप किया जाता है और आत्मा की शुद्धि हेतु चिंतन किया जाता है।"
+            android:textSize="16sp"
+            android:paddingTop="16dp"/>
+
+        <!-- PDF Button -->
+        <Button
+            android:id="@+id/pdfButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open Pratikraman PDF"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>

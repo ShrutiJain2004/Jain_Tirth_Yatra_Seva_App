@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_maps"
+        android:icon="@drawable/ic_maps"
+        android:title="Maps" />
+
+    <item
+        android:id="@+id/nav_ocr"
+        android:icon="@drawable/ic_ocr"
+        android:title="OCR" />
+
+    <item
+        android:id="@+id/nav_jreels"
+        android:icon="@drawable/ic_jreels"
+        android:title="JReels" />
+
+    <item
+        android:id="@+id/nav_jatra"
+        android:icon="@drawable/ic_jatra"
+        android:title="Jatra" />
+
+</menu>

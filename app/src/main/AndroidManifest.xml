@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.application">
+    <!-- Camera and Location Permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Declare Camera Feature -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- OCR -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Application">
+        <activity
+            android:name=".TirthDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GujaratTirthListActivity"
+            android:exported="false" />
+        <activity android:name=".UvasagaramActivity" />
+        <activity android:name=".Namuthunam" />
+        <activity android:name=".ManglikActivity" />
+        <activity android:name=".Navkar1" />
+        <activity android:name=".PavapuriActivity" />
+        <activity
+            android:name=".GirnarjiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShikharjiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PalitanaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VehicleRentalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".YatraPlanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VideoStavanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AudioStavanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AartiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StavanLyricsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TirthankarListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TirthankarStoryActivity"
+            android:exported="false" />
+        <activity android:name=".TirthankarActivity" />
+        <activity android:name=".NavkarMantraActivity" />
+        <activity android:name=".KarmaActivity" />
+        <activity android:name=".ChaityavandanActivity" />
+        <activity android:name=".BhaktambarActivity" />
+        <activity android:name=".SamayikActivity" />
+        <activity android:name=".PratikramanActivity" />
+        <activity android:name=".AshtaPujaActivity" />
+        <activity
+            android:name=".DharamshalaActivity"
+            android:exported="false" />
+        <activity android:name=".StateTempleListActivity" />
+        <activity
+            android:name=".TempleDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PanchTirthiDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MantraDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentHostActivity"
+            android:exported="false" />
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".LoginActivity" /> <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY_HERE" />
+
+        <activity android:name=".PakistanActivity" />
+        <activity android:name=".CityTempleActivity" />
+        <activity
+            android:name=".ThailandActivity"
+            android:exported="false" />
+        <activity android:name=".IndiaActivity" />
+        <activity android:name=".StutisStavansActivity" />
+        <activity android:name=".LearningJainismActivity" />
+        <activity android:name=".PachkhanActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LanguageSelectionActivity" />
+        <activity android:name=".PermissionActivity" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

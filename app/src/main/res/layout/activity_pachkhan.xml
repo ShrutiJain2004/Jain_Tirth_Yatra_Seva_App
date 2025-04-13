@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="WebViewLayout">
+
+        <!-- Heading -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pachkhan"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:paddingBottom="12dp" />
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pachkhan is a religious vow taken before any religious or daily spiritual activity. It helps purify intentions and align with Jain principles."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:paddingBottom="16dp" />
+
+        <!-- PDF Section -->
+
+        <Button
+            android:id="@+id/pdfButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pachkhan Pdf" />
+
+
+        <!-- Video Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pachkhan Videos"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:paddingBottom="8dp" />
+
+        <!-- WebView for Video 1 -->
+        <WebView
+            android:id="@+id/videoWebView1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- WebView for Video 2 -->
+        <WebView
+            android:id="@+id/videoWebView2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- WebView for Video 3 -->
+        <WebView
+            android:id="@+id/videoWebView3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- WebView for Video 4 -->
+        <WebView
+            android:id="@+id/videoWebView4"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- WebView for Video 5 -->
+        <WebView
+            android:id="@+id/videoWebView5"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>

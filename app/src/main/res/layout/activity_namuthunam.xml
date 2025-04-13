@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Namuthunam"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:paddingBottom="8dp" />
+
+        <!-- YouTube Video -->
+        <WebView
+            android:id="@+id/namuthunam_video"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp"
+            tools:ignore="WebViewLayout" />
+
+         <!-- Mantra Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Namuthunam Mantra:"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Mantra Text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="णमोत्थुणं अरिहंताणं भगवंताणं ।१।\nआइगराणं तित्थयराणं सयं-संबुद्धाणं ।२।\n\nपुरिसुत्तमाणं पुरिस-सीहाणं पुरिस-वर-पुंडरियाणं
+\nपुरिस-वर-गंधहत्थीणं ।३।\n\nलोगुत्तमाणं लोग-नाहाणं लोग-हियाणं\nलोग-पईवाणं लोग-पज्जोअ-गराणं ।४।\n
+\nअभय-दयाणं चक्खु-दयाणं मग्ग-दयाणं\nसरण-दयाणं बोहि-दयाणं ।५।\n\nधम्म-दयाणं धम्म-देसयाणं धम्म-नायगाणं
+\nधम्म-सारहीणं धम्म-वर-चाउरंत-चक्कवट्टीणं ।६।\n\nअप्पडिहय-वर-नाण-दंसण-धराणं वियट्ट-छउमाणं ।७।\n\nजिणाणं जावयाणं तिण्णाणं तारयाणं
+\nबुद्धाणं बोहयाणं मुत्ताणं मोअगाणं ।८।\n\nसव्वन्नूणं सव्व-दरिसीणं सिव-मयल-मरुअ-मणंत-\nमक्खय-मव्वाबाह-मपुणरावित्ति सिद्धिगइ-नामधेयं
+\nठाणं संपत्ताणं नमो जिणाणं जिअ-भयाणं ।९।\n\nजे अ अईया सिद्धा जे अ भविस्संति-णागए काले\nसंपइ अ वट्टमाणा सव्वे ति-विहेण वंदामि ।१०।"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:lineSpacingExtra="4dp"
+            android:paddingBottom="20dp"
+            android:background="#F4A49E"/>
+    </LinearLayout>
+</ScrollView>

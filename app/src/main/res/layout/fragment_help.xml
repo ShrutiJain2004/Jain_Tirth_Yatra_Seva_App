@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help and Support"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:paddingBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frequently Asked Questions (FAQ)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. How to use this app?\nAnswer: You can navigate through different sections using the side drawer and bottom navigation."
+            android:textSize="16sp"
+            android:paddingTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. How to contact support?\nAnswer: You can email us or call using the details below."
+            android:textSize="16sp"
+            android:paddingTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Us"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: cutiee3470@gmai.com"
+            android:textSize="16sp"
+            android:paddingTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone: +91 9079177109"
+            android:textSize="16sp"
+            android:paddingTop="5dp"/>
+
+        <Button
+            android:id="@+id/btn_contact_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help Support"
+            android:layout_marginTop="15dp"/>
+    </LinearLayout>
+</ScrollView>

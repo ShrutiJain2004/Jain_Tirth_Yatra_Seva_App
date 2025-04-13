@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/templeDetailImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/templeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temple Name"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/templeAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address will show here"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/templeHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginTop="16dp"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:id="@+id/contactLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/callIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_call"
+            android:contentDescription="Call Icon"
+            android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/templeContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0300-0000000"
+                android:textSize="16sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/locationSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:id="@+id/mapIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/location"
+                android:contentDescription="Location"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                />
+
+
+            <TextView
+                android:id="@+id/locationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Location"
+                android:textColor="#2196F3"
+                android:textSize="20sp"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

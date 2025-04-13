@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- YouTube Video WebView -->
+        <WebView
+            android:id="@+id/youtubeWebView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="24dp"
+            tools:ignore="WebViewLayout" />
+
+        <!-- Button: 24 Tirthankars -->
+        <Button
+            android:id="@+id/btnTirthankars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="24 Tirthankar's"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <!-- Button: Story of Tirthankars -->
+        <Button
+            android:id="@+id/btnTirthankarStory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Story of Tirthankar's"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

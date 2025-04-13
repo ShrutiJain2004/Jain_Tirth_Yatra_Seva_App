@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uvasagaram Stotra"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:paddingBottom="8dp" />
+
+        <!-- YouTube Video -->
+        <WebView
+            android:id="@+id/uvasagaram_video"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp"
+            tools:ignore="WebViewLayout" />
+
+        <!-- Mantra Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uvasagaram Stotra:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"/>
+
+        <!-- Mantra Text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="उवसग्गहरं पासं, पासं वंदामि कम्म-घण मुक्कं ।\nविसहर विस निन्नासं, मंगल कल्लाण आवासं ॥१॥\n\n
+विसहर फुल्लिंग मंतं, कंठे धारेइ जो सया मणुओ ।\nतस्स गह रोग मारी, दुट्ठ जरा जंति उवसामं ॥२॥\n\n
+चिट्ठउ दुरे मंतो, तुज्झ पणामो वि बहुफलो होइ ।\nनरतिरिएसु वि जीवा, पावंति न दुक्ख-दोगच्चं ॥३॥\n\n
+तुह सम्मत्ते लद्धे, चिंतामणि कप्पपाय वब्भहिए ।\nपावंति अविग्घेणं, जीवा अयरामरं ठाणं ॥४॥\n\n
+इअ संथुओ महायस, भत्तिब्भर निब्भरेण हिअएण ।\nता देव दिज्ज बोहिं, भवे भवे पास जिणचंद ॥५॥\n\n "
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:lineSpacingExtra="4dp"
+            android:paddingBottom="20dp"
+            android:background="#F4A49E"/>
+    </LinearLayout>
+</ScrollView>

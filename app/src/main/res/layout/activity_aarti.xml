@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="WebViewLayout">
+
+        <!-- Top Heading -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aarti"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:paddingBottom="16dp" />
+
+        <!-- Aarti 1 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1.Divo Re Divo..."
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:paddingBottom="8dp" />
+
+        <WebView
+            android:id="@+id/videoWebView1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/pdfLink1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View PDF"
+            android:textColor="#2196F3"
+            android:textStyle="bold"
+            android:autoLink="web"
+            android:paddingBottom="16dp" />
+
+        <!-- Aarti 2 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2.Mahavir Aarti"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:paddingBottom="8dp" />
+
+        <WebView
+            android:id="@+id/videoWebView2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/pdfLink2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View PDF"
+            android:textColor="#2196F3"
+            android:textStyle="bold"
+            android:autoLink="web"
+            android:paddingBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>

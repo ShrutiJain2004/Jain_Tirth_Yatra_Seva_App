@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Navkar Mantra"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <WebView
+            android:id="@+id/youtubeView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            tools:ignore="WebViewLayout" />
+
+        <Button
+            android:id="@+id/openYoutubeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Watch on YouTube"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Written mantra -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="णमो अरिहंताणं\nणमो सिद्धाणं\nणमो आयरियाणं\nणमो उवज्झायाणं\nणमो लोए सव्व साहूणं\nएसो पंच नमोक्कारो\nसव्व पावप्पणासणो\nमंगलाणं च सव्वेसिं\nपधमं हवई मंगलं"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:padding="8dp"
+            android:background="#FFE0B2"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Explanation -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"
+            android:lineSpacingExtra="6dp"
+            android:text="Explanation:\n\n• The Navkar Mantra is the most important mantra in Jainism.\n
+ • It pays respect to the five supreme beings: Arihants, Siddhas, Acharyas, Upadhyays, and Sadhus.\n
+ • It is a universal prayer of peace and spiritual upliftment.\n
+ • It's not dedicated to any one person, god, or deity.\n
+ • It emphasizes values: purity, self-discipline, non-violence, and spiritual growth.\n
+ • It's often the first prayer taught to every Jain child.\n
+ • Chanting it daily brings peace, positivity, and focus on self-purification.\n\n
+            Meaning Line by Line:\n
+ 1. णमो अरिहंताणं (Namo Arihantanam)\n   → I bow down to the Arihants – enlightened beings who have conquered inner enemies like anger, ego, deceit, and greed.\n\n
+ 2. णमो सिद्धाणं (Namo Siddhanam)\n   → I bow down to the Siddhas – liberated souls who have attained Moksha (liberation) and are free from the cycle of birth and death.\n\n
+ 3. णमो आयरियाणं (Namo Ayariyanam)\n   → I bow down to the Acharyas – spiritual leaders who guide and teach others about Jain principles.\n\n
+ 4. णमो उवज्झायाणं (Namo Uvajjhayanam)\n   → I bow down to the Upadhyays – teachers of scriptures and philosophy.\n\n
+ 5. णमो लोए सव्वसाहूणं (Namo Loe Savva Sahunam)\n   → I bow down to all Sadhus and Sadhvis – monks and nuns who follow a path of discipline and non-violence." />
+
+        <!-- Audio Button -->
+        <Button
+            android:id="@+id/playAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play Audio"
+            android:layout_gravity="center"
+            android:padding="12dp"/>
+    </LinearLayout>
+</ScrollView>

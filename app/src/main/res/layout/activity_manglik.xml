@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manglik"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:paddingBottom="8dp" />
+
+        <!-- YouTube Video -->
+        <WebView
+            android:id="@+id/manglik_video"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp"
+            tools:ignore="WebViewLayout" />
+
+        <!-- Mantra Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manglik Mantra"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Mantra Text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="**चत्तारि मंगलं**\n\nअरिहंता मंगलं, सिद्धा मंगलं, साहू मंगलं,\nकेवली पन्नत्तो धम्मो मंगलं।
+\nचत्तारि लोगुत्तमा, अरिहंता लोगुत्तमा, सिद्धा लोगुत्तमा,\nसाहू लोगुत्तमा, केवली पन्नत्तो धम्मो लोगुत्तमो।
+\nचत्तारि सरणं पवज्जामि, अरिहंते सरणं पवज्जामि,\nसिद्धे सरणं पवज्जामि, साहू सरणं पवज्जामि,\nकेवली पन्नत्ते धम्मे सरणं पवज्जामि। "
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:lineSpacingExtra="4dp"
+            android:paddingBottom="20dp"
+            android:background="#F4A49E"/>
+    </LinearLayout>
+</ScrollView>

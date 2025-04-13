@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:ignore="WebViewLayout">
+
+        <WebView
+            android:id="@+id/bhaktambarWebView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <Button
+            android:id="@+id/playPauseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play Video"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/stotraTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bhaktamar Stotra "
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/explanationTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Explanation of Bhaktambar..."
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:textColor="#444444" />
+    </LinearLayout>
+</ScrollView>

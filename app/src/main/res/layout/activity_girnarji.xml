@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Heading -->
+        <TextView
+            android:id="@+id/girnarji_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Girnarji"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:paddingBottom="10dp" />
+
+        <!-- YouTube Video -->
+        <WebView
+            android:id="@+id/girnarji_video"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <!-- History Heading -->
+        <TextView
+            android:id="@+id/history_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp" />
+
+        <!-- History Content -->
+        <TextView
+            android:id="@+id/girnarji_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Girnarji is a sacred Jain pilgrimage site in Gujarat. It is believed that the 22nd Tirthankara, Lord Neminath, attained nirvana on this mountain. The temples on the hill date back to ancient times and are visited by thousands of devotees every year."
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>

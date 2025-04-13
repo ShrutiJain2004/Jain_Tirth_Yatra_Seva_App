@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Heading -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8 Karma's in Jainism"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- Explanation -->
+        <TextView
+            android:id="@+id/karmaTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="true"
+            />
+
+        <!--
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/Gyanavarniya"
+            android:scaleType="fitCenter"
+            android:contentDescription="Jnanavarniya Karma Image" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/darshanavarniya"
+            android:scaleType="fitCenter"
+            android:contentDescription="Darshanavarniya Karma Image" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/mohaniya"
+            android:scaleType="fitCenter"
+            android:contentDescription="Mohaniya Karma Image" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/antaraya"
+            android:scaleType="fitCenter"
+            android:contentDescription="Antaraya Karma Image" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/nam"
+            android:scaleType="fitCenter"
+            android:contentDescription="Nam Karma Image" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/gotra"
+            android:scaleType="fitCenter"
+            android:contentDescription="Gotra Karma Image" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/vedaniya"
+            android:scaleType="fitCenter"
+            android:contentDescription="Vedaniya Karma Image" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ayushya"
+            android:scaleType="fitCenter"
+            android:contentDescription="Ayushya Karma Image" />
+         -->
+
+    </LinearLayout>
+</ScrollView>

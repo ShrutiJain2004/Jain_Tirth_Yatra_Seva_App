@@ -1,0 +1,52 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/samayikHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Samayik"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:textColor="@color/black"/>
+
+        <WebView
+            android:id="@+id/videoWebView1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:ignore="WebViewLayout" />
+
+        <WebView
+            android:id="@+id/videoWebView2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            tools:ignore="WebViewLayout" />
+
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Samayik is a sacred Jain practice of meditation and introspection, performed to attain spiritual peace and equanimity. It involves sitting calmly, chanting mantras, and focusing on the soul, distancing from worldly distractions for a fixed time (usually 48 minutes). Samayik helps cultivate forgiveness, compassion, and detachment from material desires."
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/pdfButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Samayik PDF "
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>
