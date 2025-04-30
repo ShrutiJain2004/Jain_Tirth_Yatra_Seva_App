@@ -2,26 +2,36 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.application">
-    <!-- Camera and Location Permissions -->
+    <!-- Camera -->
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Declare Camera Feature -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- OCR -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
 
     <application
         android:allowBackup="true"
+        android:theme="@style/Theme.Application"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Application">
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true">
+
         <activity
-            android:name=".TirthDetailsActivity"
+            android:name=".BookingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_booking"
+            android:theme="@style/Theme.Application" />
+        <activity
+            android:name=".DharamshalaDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".GujaratTirthListActivity"
+            android:name=".TirthDetailsActivity"
             android:exported="false" />
         <activity android:name=".UvasagaramActivity" />
         <activity android:name=".Namuthunam" />
@@ -36,12 +46,6 @@
             android:exported="false" />
         <activity
             android:name=".PalitanaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".VehicleRentalActivity"
-            android:exported="false" />
-        <activity
-            android:name=".YatraPlanActivity"
             android:exported="false" />
         <activity
             android:name=".VideoStavanActivity"
@@ -86,16 +90,19 @@
             android:name=".FragmentHostActivity"
             android:exported="false" />
         <activity android:name=".EditProfileActivity" />
-        <activity android:name=".LoginActivity" /> <!-- Google Maps API Key -->
+        <activity android:name=".LoginActivity" />
+        <!-- Google Maps API Key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY_HERE" />
+            android:value="AIzaSyBnHTIPo7VT_8nqmep-qtdY0AFVEJA_D2k" />
 
         <activity android:name=".PakistanActivity" />
         <activity android:name=".CityTempleActivity" />
+
         <activity
             android:name=".ThailandActivity"
             android:exported="false" />
+
         <activity android:name=".IndiaActivity" />
         <activity android:name=".StutisStavansActivity" />
         <activity android:name=".LearningJainismActivity" />
@@ -105,7 +112,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

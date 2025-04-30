@@ -1,23 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Settings Heading -->
     <TextView
+        android:id="@+id/tv_settings_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Settings"
-        android:textSize="22sp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@android:color/black"
-        android:paddingBottom="20dp"/>
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"/>
 
+    <!-- Dark Mode Option with Switch -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tv_dark_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mode"
+            android:textSize="20sp"
+            android:layout_weight="1" />
+
+        <Switch
+            android:id="@+id/switch_dark_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </LinearLayout>
+
+    <!-- Notification -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tv_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Notifications"
+            android:textSize="20sp" />
+
+        <Switch
+            android:id="@+id/switch_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </LinearLayout>
+
+    <!-- Language Selected Option -->
+    <TextView
+        android:id="@+id/tv_language_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Language: English"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Button to Change Language -->
+    <Button
+        android:id="@+id/btn_change_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Language"
+        android:textSize="16sp" />
+
+    <!-- Rating Section -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Settings options will be added here later."
-        android:textSize="16sp"/>
+        android:text="Rate Us"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingTop="24dp"
+        android:paddingBottom="8dp"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:layout_marginTop="16dp"
+        style="?android:attr/ratingBarStyle"
+        android:theme="@style/RatingBarTheme" />
+
+    <!-- Feedback Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Feedback"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingTop="24dp"
+        android:paddingBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/feedbackEditText"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:hint="Write your feedback here..."
+        android:background="@android:drawable/edit_text"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:padding="12dp"/>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submitFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"/>
+
+    <!--Privacy and Terms & Conditions -->
+    <TextView
+        android:id="@+id/tv_privacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Privacy Policy"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:padding="8dp"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/tv_terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terms and Conditions"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:padding="8dp"
+        android:clickable="true" />
 
 </LinearLayout>
+</ScrollView>

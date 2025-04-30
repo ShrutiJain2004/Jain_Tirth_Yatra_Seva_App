@@ -26,19 +26,19 @@ public class StutisStavansActivity extends AppCompatActivity {
 // Enable JavaScript
         WebSettings settings1 = stutiWebView1.getSettings();
         settings1.setJavaScriptEnabled(true);
-        stutiWebView1.loadData("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/eZBbIQac_8Q\" frameborder=\"0\" allowfullscreen></iframe>", "text/html", "utf-8");
+        stutiWebView1.loadData("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/ybOHsLvN2E4\" frameborder=\"0\" allowfullscreen></iframe>", "text/html", "utf-8");
 
         WebSettings settings2 = stutiWebView2.getSettings();
         settings2.setJavaScriptEnabled(true);
-        stutiWebView2.loadData("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/o9MGgrPQi3Q\" frameborder=\"0\" allowfullscreen></iframe>", "text/html", "utf-8");
+        stutiWebView2.loadData("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/jU9GmGYYVdQ\" frameborder=\"0\" allowfullscreen></iframe>", "text/html", "utf-8");
 
         WebSettings settings3 = stavanWebView1.getSettings();
         settings3.setJavaScriptEnabled(true);
-        stavanWebView1.loadData("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/3WPh1-kjFYI\" frameborder=\"0\" allowfullscreen></iframe>", "text/html", "utf-8");
+        stavanWebView1.loadData("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/cx6Nrpm5-w4\" frameborder=\"0\" allowfullscreen></iframe>", "text/html", "utf-8");
 
         WebSettings settings4 = stavanWebView2.getSettings();
         settings4.setJavaScriptEnabled(true);
-        stavanWebView2.loadData("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/JoUiKbmc_4I\" frameborder=\"0\" allowfullscreen></iframe>", "text/html", "utf-8");
+        stavanWebView2.loadData("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/u5uLkZra_8g \" frameborder=\"0\" allowfullscreen></iframe>", "text/html", "utf-8");
 
 
     }

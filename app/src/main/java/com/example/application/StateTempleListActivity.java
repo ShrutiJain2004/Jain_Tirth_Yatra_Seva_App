@@ -118,7 +118,7 @@ public class StateTempleListActivity extends AppCompatActivity {
             ));
 
             templeList.add(new Temple(
-                    "Lodurva Jain Temple,Jaisalmer ", "Jaisalmer", R.drawable.lodurva_jaisalmer,
+                    "Lodurva Jain Temple,Jaisalmer", "Jaisalmer", R.drawable.lodurva_jaisalmer,
                     "https://www.google.com/maps?q=Lodurva+Jain+Temple+Jaisalmer",
                     "Address : Lodurva Jain Temple , Lodurva, Jaisalmer,Rajasthan 345001 ",
                     "History : Lodhurva Jain Temple is believed to have been built in the 10th century during the reign of the" +
@@ -146,7 +146,7 @@ public class StateTempleListActivity extends AppCompatActivity {
             ));
 
             templeList.add(new Temple(
-                    " Dilwara Jain Temple , Mount Abu ", "Abu", R.drawable.dilwara,
+                    "Dilwara Jain Temple , Mount Abu", "Abu", R.drawable.dilwara,
                     "https://www.google.com/maps?q= Dilwara+Jain+Temple+Abu",
                     "Address:  Delwara, Mount Abu, Rajasthan 30750",
                     "History: Constructed between the 11th and 13th centuries, the Dilwara Temples" +
@@ -193,7 +193,7 @@ public class StateTempleListActivity extends AppCompatActivity {
                     "Contact : "
             ));
 
-            templeList.add(new Temple("Mahudi Jain Tirth","Gujarat",R.drawable.mahudi,
+            templeList.add(new Temple("Mahudi","Gujarat",R.drawable.mahudi,
                     "https://www.google.com/maps?q=Mahudi+Jain+Tirth+Gujarat",
                     "Address :  Mahudi Village, Mansa Taluka, Gandhinagar District, Gujarat",
                     "History : Mahudi is particularly famous for the Ghantakarna Mahavir Temple.\n" +
@@ -203,7 +203,7 @@ public class StateTempleListActivity extends AppCompatActivity {
                     "Contact : "
             ));
 
-            templeList.add(new Temple("Songadh Jain Tirth","Gujarat",R.drawable.songadh,
+            templeList.add(new Temple("Songadh Jain Temple","Gujarat",R.drawable.songadh,
                     "https://www.google.com/maps?q=Songadh+Jain+Tirth+Gujarat",
                     "Address :  Songadh Village, Vyara Taluka, Tapi District, Gujarat ",
                     "History : Songadh is a place that has gained more recent prominence, " +
@@ -224,9 +224,7 @@ public class StateTempleListActivity extends AppCompatActivity {
                     "Contact : "
             ));
         } else if ("Bihar".equals(selectedState)) {
-            templeList.add(new Temple("Sammed ShikharJi",
-                    "",
-                    R.drawable.shikharji,
+            templeList.add(new Temple("Sammed ShikharJi","Jharkhand",R.drawable.shikharji,
                     "https://www.google.com/maps?q=Sammed+ShikharJi+Tirth+Bihar",
                     "Address : Located on Parasnath Hills , Madhuban , Giridih , Jharkhand",
                     "History : Shikharji is considered the most sacred Jain Tirtha (pilgrimage site).\n" +
@@ -240,8 +238,7 @@ public class StateTempleListActivity extends AppCompatActivity {
             ));
 
         } else if ("Delhi".equals(selectedState)) {
-            templeList.add(new Temple(" Dadabari Jain Shwetambar Mandir.",
-                    "Mehroli",R.drawable.mehroli,
+            templeList.add(new Temple("Dadabari Jain Shwetambar Mandir","Mehroli",R.drawable.mehroli,
                     "https://www.google.com/maps?q=Dadabari+Jain+Shwetambar+Mandir+Delhi",
                     "Address : Qutab Minar Metro Station, Devi Puriji Ashram Road, opp. Zafar Mahal Road, Aam Bagh, Ladha Sarai Village," +
                             " Mehrauli, New Delhi, Delhi 110030 ",

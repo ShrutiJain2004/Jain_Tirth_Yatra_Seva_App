@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privacy Policy"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privacy Policy\n\nEffective Date: April 14, 2025\nApp Name: Bhavyatra\nDeveloper: Shruti Jain\n\nYour privacy is important to us. This Privacy Policy explains how Bhavyatra collects, uses, and protects your information when you use our app.\n\n1. Information We Collect\nWe do not collect any personal information unless you explicitly provide it. However, to improve your experience, we may collect:\n- Device Information\n- Feedback\n- Location (if permission granted)\n\n2. How We Use Your Information\n- To provide and improve the app experience\n- To personalize features\n- To respond to feedback\n\n3. Data Sharing\nWe do not share your personal data unless:\n- Required by law\n- Needed to protect our users\n\n4. Security\nWe use reasonable measures to protect your data, but no system is 100% secure.\n\n5. Your Consent\nBy using the app, you consent to this Privacy Policy.\n\n6. Changes to This Policy\nWe may update this policy. Changes will be reflected in the app.\n\n7. Contact Us\nIf you have any questions, contact us at:\n[shruti3470@gmail.com]"
+            android:textSize="16sp"
+            android:padding="8dp"
+            />
+
+
+    </LinearLayout>
+
+</ScrollView>

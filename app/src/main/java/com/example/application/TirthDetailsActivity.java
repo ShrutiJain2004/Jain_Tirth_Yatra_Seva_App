@@ -1,12 +1,9 @@
 package com.example.application;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
@@ -14,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,20 +19,24 @@ public class TirthDetailsActivity extends AppCompatActivity {
     String locationUrl = "";
     String distanceText = "";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tirth_details);
-        // Retrieve the search query passed via the Intent
+
         String searchQuery = getIntent().getStringExtra("SEARCH_QUERY");
 
         String contactNumber = "";
         if (searchQuery != null) {
-            // Display the query in a TextView (or any other UI element)
-            TextView tirthNameTextView = findViewById(R.id.tirth_name_text_view);  // Ensure this ID exists in your XML
+            TextView tirthNameTextView = findViewById(R.id.tirth_name_text_view);
             tirthNameTextView.setText(searchQuery);
         } else {
+            // Hide the TextView when there's no search query
+            TextView tirthNameTextView = findViewById(R.id.tirth_name_text_view);
+            if (tirthNameTextView != null) {
+                tirthNameTextView.setVisibility(View.GONE);
+            }
+
             TextView heading = findViewById(R.id.tvTirthName);
             WebView youtubePlayer = findViewById(R.id.youtubePlayer);
             TextView locationText = findViewById(R.id.tvLocationText);
@@ -46,10 +46,8 @@ public class TirthDetailsActivity extends AppCompatActivity {
             ImageView ivCallIcon = findViewById(R.id.ivCallIcon);
 
             String tirthName = getIntent().getStringExtra("tirth_name");
-            Log.d("TirthDetails", "Tirth Name: " + tirthName);
             heading.setText(tirthName);
 
-            // Assign values based on tirthName
             switch (tirthName) {
                 case "Shankeshwar":
                     videoUrl = "https://www.youtube.com/embed/Uk9sLxolugQ";
@@ -89,156 +87,134 @@ public class TirthDetailsActivity extends AppCompatActivity {
                     videoUrl = "https://www.youtube.com/embed/tIRbJ6utcJ0";
                     locationUrl = "https://www.google.com/maps?q=Nakoda+Parshwanath+Jain+Temple";
                     distanceText = "Located in Barmer District, Rajasthan";
-                    contactNumber = "1234567890"; // Replace with real number
+                    contactNumber = "1234567890";
                     break;
-
                 case "Jirawala":
                     videoUrl = "https://www.youtube.com/embed/fnue-FIgjBo";
                     locationUrl = "https://www.google.com/maps?q=Jirawala+Jain+Temple";
                     distanceText = "Nearby Tirths: Nakoda (78 km), Abu Road (42 km)";
                     contactNumber = "094132 30818";
                     break;
-
                 case "Khajuri":
                     videoUrl = "https://www.youtube.com/embed/KIpHY_7KZ8w";
                     locationUrl = "https://www.google.com/maps?q=Khajuri+Jain+Tirth";
                     distanceText = "Nearby Tirths: Nakoda (40 km)";
-                    contactNumber = "098290 12345"; // Placeholder
+                    contactNumber = "098290 12345";
                     break;
-
                 case "Ranakpur":
                     videoUrl = "https://www.youtube.com/embed/o8Gx2B-O06Y";
                     locationUrl = "https://www.google.com/maps?q=Ranakpur+Jain+Temple";
                     distanceText = "Located in Pali District, Rajasthan";
                     contactNumber = "+91-8696453616";
                     break;
-
                 case "Kumbhalgarh":
                     videoUrl = "https://www.youtube.com/embed/h7xl-AdAJBo";
                     locationUrl = "https://www.google.com/maps?q=Kumbhalgarh+Jain+Temple";
                     distanceText = "Nearby Tirths: Ranakpur (15 km)";
                     contactNumber = "+91-94140-95850";
                     break;
-
                 case "Shree Keshariya Ji Jain Temple":
                     videoUrl = "https://www.youtube.com/embed/N8KKMxnqsck";
                     locationUrl = "https://www.google.com/maps?q=Shree+Keshariya+Ji+Jain+Temple";
                     distanceText = "Located in Rishabhdev, Udaipur District, Rajasthan";
                     contactNumber = "02959-252251 / +91-9829014024";
                     break;
-
                 case "Mangi Tungi":
                     videoUrl = "https://www.youtube.com/embed/M21HhFlD7zM";
                     locationUrl = "https://www.google.com/maps?q=Mangi+Tungi";
                     distanceText = "Located in Nashik District, Maharashtra";
                     contactNumber = "02556 262339";
                     break;
-
                 case "Toranmal":
                     videoUrl = "https://www.youtube.com/embed/A0KMRPX5Jso";
                     locationUrl = "https://www.google.com/maps?q=Toranmal+Jain+Tirth";
                     distanceText = "Mangi Tungi (102 km)";
                     contactNumber = "02569-223366";
                     break;
-
                 case "Kunthalgiri":
                     videoUrl = "https://www.youtube.com/embed/0hjE-5XfWUg";
                     locationUrl = "https://www.google.com/maps?q=Kunthalgiri+Jain+Temple";
                     distanceText = "Located near Beed, Maharashtra";
                     contactNumber = "096732 71111";
                     break;
-
                 case "Rishabhdev":
                     videoUrl = "https://www.youtube.com/embed/2moyX0dACyc";
                     locationUrl = "https://www.google.com/maps?q=Rishabhdev+Jain+Tirth";
                     distanceText = "Nearby Tirths: Kunthalgiri (150 km), Udaipur (60 km)";
                     contactNumber = "+91-0294-2441420";
                     break;
-
                 case "Gajpanth":
                     videoUrl = "https://www.youtube.com/embed/i9ZoZp7YhqQ";
                     locationUrl = "https://www.google.com/maps?q=Gajpanth+Jain+Tirth";
                     distanceText = "Nearby Tirths: Kunthalgiri (60 km)";
                     contactNumber = "+91-2557-220124";
                     break;
-
                 case "Sonagiri Jain Temples":
                     videoUrl = "https://www.youtube.com/embed/yGhxKG2oPk8";
                     locationUrl = "https://www.google.com/maps?q=Sonagiri+Jain+Temples";
                     distanceText = "Nearby Tirths: Gwalior (68 km), Datia (15 km)";
-                    contactNumber = "+91-1234-567890"; // Placeholder
+                    contactNumber = "+91-1234-567890";
                     break;
-
                 case "Kundalpur Jain Temple":
                     videoUrl = "https://www.youtube.com/embed/2moyX0dACyc";
                     locationUrl = "https://www.google.com/maps?q=Kundalpur+Jain+Temple+Madhya+Pradesh";
                     distanceText = "Nearby Tirths: Pateriaji (35 km), Bandakpur (50 km)";
                     contactNumber = "+91-9876-543210";
                     break;
-
                 case "Hastinapur":
                     videoUrl = "https://www.youtube.com/embed/zTttO-bDnpM";
                     locationUrl = "https://www.google.com/maps?q=Hastinapur+Jain+Temple";
                     distanceText = "Nearby Tirths: Meerut (37 km), Kankali Tila (20 km)";
-                    contactNumber = "+91-9456-789012"; // Placeholder
+                    contactNumber = "+91-9456-789012";
                     break;
-
                 case "Deogarh":
                     videoUrl = "https://www.youtube.com/embed/4pXCmMY_89E";
                     locationUrl = "https://www.google.com/maps?q=Deogarh+Jain+Temples+Lalitpur";
                     distanceText = "Nearby Tirths: Chanderi (80 km), Tikamgarh (100 km)";
                     contactNumber = "+91-8765-432109";
                     break;
-
                 case "Pawagiri":
                     videoUrl = "https://www.youtube.com/embed/RiQcPupl5Uo";
                     locationUrl = "https://www.google.com/maps?q=Pawagiri+Jain+Temple";
                     distanceText = "Nearby Tirths: Kundalpur (75 km)";
                     contactNumber = "+91-1234-567891";
                     break;
-
                 case "Bawangaja":
                     videoUrl = "https://www.youtube.com/embed/CpuqorBCbxc";
                     locationUrl = "https://www.google.com/maps?q=Bawangaja+Jain+Temple";
                     distanceText = "Nearby Tirths: Pavagiri (40 km), Barwani (25 km)";
                     contactNumber = "+91-9987-654321";
                     break;
-
                 case "Datia Jain Temples":
                     videoUrl = "https://www.youtube.com/embed/haz0_xPlgbQ";
                     locationUrl = "https://www.google.com/maps?q=Datia+Jain+Temples";
                     distanceText = "Nearby Tirths: Sonagiri (45 km), Jhansi (60 km)";
                     contactNumber = "+91-9001-223344";
                     break;
-
                 case "Chanderi Jain Temple":
                     videoUrl = "https://www.youtube.com/embed/YAhSGiJAyYk";
                     locationUrl = "https://www.google.com/maps?q=Chanderi+Jain+Temple";
                     distanceText = "Nearby Tirths: Deogarh (80 km)";
                     contactNumber = "+91-8888-777766";
                     break;
-
                 case "Parashnath Digambar Jain Temple":
                     videoUrl = "https://www.youtube.com/embed/zjrLRJcYruA";
                     locationUrl = "https://www.google.com/maps?q=Parashnath+Digambar+Jain+Temple+Hastinapur";
                     distanceText = "Nearby Tirths: Hastinapur (8 km) , Located in Jharkhand";
                     contactNumber = "+91-9876-543210";
                     break;
-
                 case "Jambudweep Jain Temple":
                     videoUrl = "https://www.youtube.com/embed/0LTS3upcbJ8";
                     locationUrl = "https://www.google.com/maps?q=Jambudweep+Jain+Temple";
                     distanceText = "Nearby Tirths: Parashnath Temple (6 km)";
                     contactNumber = "+91-8123-456789";
                     break;
-
                 case "Lalitpur Jain Temples":
                     videoUrl = "https://www.youtube.com/embed/9KtlSUcEIbg";
                     locationUrl = "https://www.google.com/maps?q=Lalitpur+Jain+Temples";
                     distanceText = "Nearby Tirths: Deogarh (30 km)";
                     contactNumber = "+91-7878-989898";
                     break;
-
                 case "Parichha Jain Temple":
                     videoUrl = "https://www.youtube.com/embed/zjrLRJcYruA";
                     locationUrl = "https://www.google.com/maps?q=Parichha+Jain+Temple";
@@ -247,12 +223,10 @@ public class TirthDetailsActivity extends AppCompatActivity {
                     break;
             }
 
-            // Now load YouTube video
             String html = "<iframe width=\"100%\" height=\"200\" src=\"" + videoUrl + "\" frameborder=\"0\" allowfullscreen></iframe>";
             youtubePlayer.getSettings().setJavaScriptEnabled(true);
             youtubePlayer.setWebChromeClient(new WebChromeClient());
-            youtubePlayer.loadData(html, "text/html", "utf-8"); //Corrected Line.
-
+            youtubePlayer.loadData(html, "text/html", "utf-8");
 
             if (!distanceText.isEmpty()) {
                 tvDistance.setVisibility(View.VISIBLE);
@@ -261,7 +235,6 @@ public class TirthDetailsActivity extends AppCompatActivity {
                 tvDistance.setVisibility(View.GONE);
             }
 
-            // Handle location click
             String finalLocationUrl = locationUrl;
             View.OnClickListener locationClickListener = v -> {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(finalLocationUrl));
@@ -288,10 +261,7 @@ public class TirthDetailsActivity extends AppCompatActivity {
             dharamshalaText.setOnClickListener(dharamshalaClickListener);
             dharamshalaIcon.setOnClickListener(dharamshalaClickListener);
 
-
             LinearLayout nearbyContainer = findViewById(R.id.nearbyTirthContainer);
-
-            // Sample nearby tirths based on main tirth
             List<NearbyTirth> nearbyTirthList = new ArrayList<>();
 
             if (tirthName.equals("Shankeshwar")) {
@@ -326,18 +296,14 @@ public class TirthDetailsActivity extends AppCompatActivity {
                 nearbyTirthList.add(new NearbyTirth("Parichha Jain Temple", R.drawable.parichha));
             }
 
-
-// Add views dynamically
             for (NearbyTirth tirth : nearbyTirthList) {
                 View view = getLayoutInflater().inflate(R.layout.item_nearby_tirth, null);
-
                 ImageView image = view.findViewById(R.id.nearbyTirthImage);
                 TextView name = view.findViewById(R.id.nearbyTirthName);
 
                 image.setImageResource(tirth.getImageResId());
                 name.setText(tirth.getName());
 
-                // Click to open same TirthDetailsActivity again for now
                 View.OnClickListener clickListener = v -> {
                     Intent intent = new Intent(TirthDetailsActivity.this, TirthDetailsActivity.class);
                     intent.putExtra("tirth_name", tirth.getName());
@@ -350,10 +316,8 @@ public class TirthDetailsActivity extends AppCompatActivity {
                 nearbyContainer.addView(view);
             }
 
-            // Set text to contactText TextView
             tvCallText.setText("Contact: " + contactNumber);
 
-            // Open dialer on click
             String finalContactNumber = contactNumber;
             View.OnClickListener callClickListener = v -> {
                 Intent intent = new Intent(Intent.ACTION_DIAL);
@@ -368,7 +332,6 @@ public class TirthDetailsActivity extends AppCompatActivity {
             if (ivCallIcon != null) {
                 ivCallIcon.setOnClickListener(callClickListener);
             }
-      }
-        Log.e("TirthDetailsActivity", "No search query found!");
+        }
     }
 }

@@ -1,42 +1,53 @@
 package com.example.application;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+
+/*
+AIzaSyBM5Q3SlVYKbUtyPm1EtaRD_etSRgh9lnY
+*/
 public class JatraFragment extends Fragment {
 
-    LinearLayout yatraPlanLayout, vehicleRentalLayout;
+    private CardView jatraPlanCard, vehicleRentalCard;
 
-    public JatraFragment() {
-        // Required empty public constructor
-    }
-
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_jatra, container, false);
 
-        yatraPlanLayout = view.findViewById(R.id.yatraPlanLayout);
-        vehicleRentalLayout = view.findViewById(R.id.vehicleRentalLayout);
+        jatraPlanCard = view.findViewById(R.id.jatraPlanCard);
+        vehicleRentalCard = view.findViewById(R.id.vehicleRentalCard);
 
-        yatraPlanLayout.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), YatraPlanActivity.class);
-            startActivity(intent);
-        });
-
-        vehicleRentalLayout.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), VehicleRentalActivity.class);
-            startActivity(intent);
-        });
+        jatraPlanCard.setOnClickListener(v -> openJatraPlanFragment());
+        vehicleRentalCard.setOnClickListener(v -> openVehicleRentalFragment());
 
         return view;
+    }
+
+    private void openJatraPlanFragment() {
+        // Replace with your Jatra Plan Fragment
+        Fragment jatraPlanFragment = new JatraPlanFragment();
+        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, jatraPlanFragment); // Replace fragment_container with your container ID
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    private void openVehicleRentalFragment() {
+        // Replace with your Vehicle Rental Fragment
+        Fragment vehicleRentalFragment = new VehicleRentalFragment();
+        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, vehicleRentalFragment); // Replace fragment_container with your container ID
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }

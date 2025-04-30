@@ -3,6 +3,7 @@ package com.example.application;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,9 +21,10 @@ import android.widget.TextView;
 import com.example.application.R;
 import android.widget.ImageView;
 import android.widget.Toast;
-
+import android.view.View;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -43,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences preferences = getSharedPreferences("UserPreferences", MODE_PRIVATE);
+        boolean isDarkMode = preferences.getBoolean("isDarkMode", false);
+        if (isDarkMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -146,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
             stateLayout.setPadding(8, 8, 8, 8);
 
             ImageView stateImage = new ImageView(this);
-            stateImage.setLayoutParams(new ViewGroup.LayoutParams(400, 200));
+            stateImage.setLayoutParams(new ViewGroup.LayoutParams(800, 400));
             stateImage.setScaleType(ImageView.ScaleType.CENTER_CROP);
             stateImage.setImageResource(stateImages[i]);
             stateImage.setBackgroundResource(R.drawable.image_border); // Optional border
@@ -264,7 +274,7 @@ public class MainActivity extends AppCompatActivity {
 
                 startActivity(Intent.createChooser(shareIntent, "Share via"));
                 return true;
-            }else if (itemId == R.id.nav_settings) {
+            } else if (itemId == R.id.nav_settings) {
                 openFragmentInNewWindow(SettingsFragment.class);
             } else if (itemId == R.id.nav_logout) {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
@@ -276,7 +286,6 @@ public class MainActivity extends AppCompatActivity {
             drawerLayout.closeDrawer(GravityCompat.START);
             return true;
         });
-
 
         // Handle Bottom Navigation Clicks
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -297,12 +306,9 @@ public class MainActivity extends AppCompatActivity {
             } else if (itemId == R.id.nav_jatra) {
                 openFragmentInNewWindow(JatraFragment.class);
             }
-
             return true;
         });
-
     }
-
 
     // Function to Load Fragments
     private void openFragmentInNewWindow(Class<?> fragmentClass) {
@@ -368,4 +374,5 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(this, "No results found", Toast.LENGTH_SHORT).show();
     }
+
 }

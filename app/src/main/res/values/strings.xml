@@ -1,9 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Jain Tirth Yatra</string>
     <string name="open">Open Drawer</string>
     <string name="close">Close Drawer</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="select_city_prompt">Select City</string>
+    <string name="select_persons_prompt">Select Number of Persons</string>
+    <string name="select_vehicle_prompt">Select Vehicle Type</string>
+
+    <string-array name="number_of_persons_array">
+        <item>No. of Persons</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="vehicle_type_array">
+        <item>Select Vehicle</item>
+        <item>Car</item>
+        <item>Bus</item>
+        <item>Train and Car</item>
+    </string-array>
+
+
+    <!-- Map -->
+    <array name="radius_options">
+        <item>Radius</item>
+        <item>Radius 9 kms</item>
+        <item>Radius 18 kms</item>
+        <item>Radius 27 kms</item>
+        <item>Radius 36 kms</item>
+        <item>Radius 45 kms</item>
+        <item>Radius 54 kms</item>
+        <item>Radius 63 kms</item>
+        <item>Radius 72 kms</item>
+    </array>
+
+    <string name="title_activity_booking">BookingActivity</string>
+
+
+    <string-array name="room_types">
+        <item>Small Room</item>
+        <item>Big Room</item>
+        <item>Sweet Room</item>
+        <item>Family Room</item>
+    </string-array>
+
 
 </resources>

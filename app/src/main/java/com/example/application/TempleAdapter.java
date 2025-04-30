@@ -53,8 +53,7 @@ public class TempleAdapter extends RecyclerView.Adapter<TempleAdapter.ViewHolder
         // Click on Dharamshala text to open DharamshalaActivity
         holder.dharamshalaOption.setOnClickListener(v -> {
             Intent intent = new Intent(context, DharamshalaActivity.class);
-            intent.putExtra("temple_name", temple.getName());
-            // You can pass image or address here too if needed
+            intent.putExtra("tirth_name", temple.getName());
             context.startActivity(intent);
         });
     }
