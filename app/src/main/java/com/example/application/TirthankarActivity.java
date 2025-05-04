@@ -7,6 +7,9 @@ import android.webkit.WebView;
 import android.webkit.WebChromeClient;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.MediaController;
+import android.widget.VideoView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class TirthankarActivity extends AppCompatActivity {

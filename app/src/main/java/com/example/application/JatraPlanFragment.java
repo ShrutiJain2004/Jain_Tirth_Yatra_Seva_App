@@ -17,10 +17,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.google.ai.client.generativeai.*;
-import com.example.application.BuildConfig;
-
-
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -148,55 +144,39 @@ public class JatraPlanFragment extends Fragment {
             return;
         }
 
-        String prompt = "Generate a detailed Jain Tirth Yatra travel plan:\n" +
-                "Start Place: " + startPlace + "\n" +
-                "Start Date: " + startDate + " " + startTime + "\n" +
-                "Days: " + numberOfDays + "\n" +
-                "Vehicle Type: " + vehicleType + "\n" +
-                "Tirths: " + tirthCover + "\n" +
-                "Residence: " + residenceArea + ", " + residenceCity + "\n" +
-                "Comments: " + comments + "\n\n" +
-                "Provide a day-wise detailed itinerary.";
+        // Sample generated plan data with heading
+        String samplePlanWithHeading = "Yatra Route:\n" +
+                "Day 1: Arrive at " + startPlace + ". Local sightseeing.\n" +
+                "Day 2: Visit " + tirthCover + ". Evening prayers.\n" +
+                "Day 3: Travel to the next destination.\n" +
+                "...\n" +
+                "Day " + numberOfDays + ": Departure from the final destination.";
 
-        GenerativeModel model = new GenerativeModel(
-                "gemini-pro",
-                new GenerativeModelConfig.Builder(BuildConfig.GEMINI_API_KEY).build()
-
+        JatraPlanData jatraPlanData = new JatraPlanData(
+                firstName, lastName, email, phoneNumber, residenceArea, residenceCity,
+                startDate, startTime, startPlace, numberOfDays, vehicleType, tirthCover,
+                comments, samplePlanWithHeading
         );
 
-        model.generateContent(new TextPrompt(prompt)).thenAccept(response -> {
-            String generatedPlan = response.getText();
+        jatraPlanSubmissionsRef.push().setValue(jatraPlanData)
+                .addOnSuccessListener(aVoid -> {
+                    requireActivity().runOnUiThread(() -> {
+                        Toast.makeText(getContext(), "Plan submitted!", Toast.LENGTH_SHORT).show();
+                        clearForm();
 
-            JatraPlanData jatraPlanData = new JatraPlanData(
-                    firstName, lastName, email, phoneNumber, residenceArea, residenceCity,
-                    startDate, startTime, startPlace, numberOfDays, vehicleType, tirthCover,
-                    comments, generatedPlan
-            );
+                        GeneratedPlanFragment fragment = new GeneratedPlanFragment();
+                        Bundle bundle = new Bundle();
+                        bundle.putString("generatedPlan", samplePlanWithHeading);
+                        fragment.setArguments(bundle);
 
-            jatraPlanSubmissionsRef.push().setValue(jatraPlanData)
-                    .addOnSuccessListener(aVoid -> {
-                        requireActivity().runOnUiThread(() -> {
-                            Toast.makeText(getContext(), "Plan submitted & generated!", Toast.LENGTH_SHORT).show();
-                            clearForm();
-
-                            GeneratedPlanFragment fragment = new GeneratedPlanFragment();
-                            Bundle bundle = new Bundle();
-                            bundle.putString("generatedPlan", generatedPlan);
-                            fragment.setArguments(bundle);
-
-                            requireActivity().getSupportFragmentManager().beginTransaction()
-                                    .replace(R.id.fragment_container, fragment)
-                                    .addToBackStack(null)
-                                    .commit();
-                        });
-                    })
-                    .addOnFailureListener(e -> requireActivity().runOnUiThread(() ->
-                            Toast.makeText(getContext(), "Firebase error: " + e.getMessage(), Toast.LENGTH_SHORT).show()));
-        }).exceptionally(e -> {
-            requireActivity().runOnUiThread(() ->
-                    Toast.makeText(getContext(), "Gemini error: " + e.getMessage(), Toast.LENGTH_SHORT).show());
-            return null;
-        });
+                        requireActivity().getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.fragment_container, fragment)
+                                .addToBackStack(null)
+                                .commit();
+                    });
+                })
+                .addOnFailureListener(e -> requireActivity().runOnUiThread(() ->
+                        Toast.makeText(getContext(), "Firebase error: " + e.getMessage(), Toast.LENGTH_SHORT).show()));
     }
 
     private void clearForm() {
@@ -215,4 +195,3 @@ public class JatraPlanFragment extends Fragment {
         editTextComments.setText("");
     }
 }
-

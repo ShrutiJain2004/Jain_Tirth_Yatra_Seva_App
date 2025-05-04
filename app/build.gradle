@@ -62,6 +62,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.6.0'
     implementation 'androidx.navigation:navigation-ui:2.6.0'
     implementation 'com.google.firebase:firebase-auth:23.2.0'
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:3.0.3'
 
 // Testing
     testImplementation 'junit:junit:4.13.2'
@@ -69,7 +70,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 
 //GEMINI
-    implementation 'com.google.ai.client.generativeai:generativeai:0.4.0'
+    implementation 'com.google.ai.client.generativeai:generativeai:0.3.0'
+
 
 
 }

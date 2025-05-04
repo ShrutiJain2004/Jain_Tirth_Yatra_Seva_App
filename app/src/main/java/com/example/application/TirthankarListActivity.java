@@ -4,18 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 public class TirthankarListActivity extends AppCompatActivity {
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tirthankar_list);
-        ImageView imageView = findViewById(R.id.imageTirthankars);
+
+         imageView = findViewById(R.id.imageTirthankars);
         TextView textView = findViewById(R.id.textTirthankarsInfo);
 
         StringBuilder info = new StringBuilder();
+
         info.append("1. Rishabhanatha - Bull\n");
         info.append("2. Ajitanatha - Elephant\n");
         info.append("3. Sambhavanatha - Horse\n");

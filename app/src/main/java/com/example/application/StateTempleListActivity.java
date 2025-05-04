@@ -264,9 +264,89 @@ public class StateTempleListActivity extends AppCompatActivity {
                             "There are multiple temples within the Tirth.\n" +
                             "There is a 1406 CE inscription present.",
                     "Contact : "
-
+            ));
+        } else if ("Chattisgarh".equals(selectedState)) {
+            templeList.add(new Temple("Bawangaja Tirtha",
+                    "Bawangaja, Chhattisgarh", R.drawable.bawangaja,
+                    "https://www.google.com/maps?q=Bawangaja+Tirtha+Chhattisgarh",
+                    "Address : Bawangaja, Chhattisgarh",
+                    "History : The Bawangaja Tirtha is a famous Jain temple and pilgrimage site in Chhattisgarh. It is known for its large idol of Lord Rishabhanatha, the first Tirthankara. The temple is situated in a picturesque location surrounded by hills and forests.",
+                    "Contact : "
+            ));
+        } else if ("Haryana".equals(selectedState)) {
+            templeList.add(new Temple("Shree Sanatan Dharam Jain Temple",
+                    "Ambala, Haryana", R.drawable.sanatan_dharam_jain,
+                    "https://www.google.com/maps?q=Shree+Sanatan+Dharam+Jain+Temple+Ambala+Haryana",
+                    "Address : Ambala, Haryana",
+                    "History : The Shree Sanatan Dharam Jain Temple in Ambala is a significant Jain place of worship. The temple is known for its serene environment and beautiful architecture, dedicated to Lord Mahavira.",
+                    "Contact : "
+            ));
+        } else if ("Jharkhand".equals(selectedState)) {
+            templeList.add(new Temple("Parasnath Jain Temple",
+                    "Parasnath Hill, Jharkhand", R.drawable.parasnath,
+                    "https://www.google.com/maps?q=Parasnath+Jain+Temple+Parasnath+Hill+Jharkhand",
+                    "Address : Parasnath Hill, Jharkhand",
+                    "History : The Parasnath Jain Temple is located on the Parasnath Hill, which is one of the holiest places for Jains. It is dedicated to Lord Parshvanatha and is known for its stunning architecture and serene surroundings. The hill is also the site of several Jain temples.",
+                    "Contact : "
+            ));
+        } else if ("Karnataka".equals(selectedState)) {
+            templeList.add(new Temple("Shree Karkala Jain Temple",
+                    "Karkala, Karnataka", R.drawable.karkala_jain,
+                    "https://www.google.com/maps?q=Shree+Karkala+Jain+Temple+Karkala+Karnataka",
+                    "Address : Karkala, Karnataka",
+                    "History : The Shree Karkala Jain Temple is one of the prominent Jain temples in Karnataka. The temple is known for its massive statue of Lord Bahubali (Gomateshwara), which stands 42 feet tall and attracts pilgrims from all over India.",
+                    "Contact : "
+            ));
+        } else if ("Kerala".equals(selectedState)) {
+            templeList.add(new Temple("Parumala Jain Temple",
+                    "Parumala, Kerala", R.drawable.parumala_jain,
+                    "https://www.google.com/maps?q=Parumala+Jain+Temple+Parumala+Kerala",
+                    "Address : Parumala, Kerala",
+                    "History : Parumala Jain Temple is known for its historical significance in Kerala. The temple features beautiful architecture and is dedicated to Lord Mahavira. The serene ambiance of the temple offers a peaceful environment for meditation and prayers.",
+                    "Contact : "
+            ));
+        } else if ("Punjab".equals(selectedState)) {
+            templeList.add(new Temple("Gurudwara Nanakshahi Tirth",
+                    "Amritsar, Punjab", R.drawable.gurudwara_nanakshahi,
+                    "https://www.google.com/maps?q=Gurudwara+Nanakshahi+Tirth+Amritsar+Punjab",
+                    "Address : Amritsar, Punjab",
+                    "History : The Gurudwara Nanakshahi Tirth is an important Jain temple located in Amritsar. Known for its historical connections to the Sikh and Jain community, it attracts a large number of pilgrims every year.",
+                    "Contact : "
+            ));
+        } else if ("Madhya Pradesh".equals(selectedState)) {
+            templeList.add(new Temple("Kanch Mandir",
+                    "Indore, Madhya Pradesh", R.drawable.kanch_mandir,
+                    "https://www.google.com/maps?q=Kanch+Mandir+Indore+Madhya+Pradesh",
+                    "Address : Indore, Madhya Pradesh",
+                    "History : The Kanch Mandir in Indore is a famous Jain temple known for its beautiful glasswork. The temple is dedicated to Lord Mahavira and is considered one of the most significant Jain temples in Madhya Pradesh.",
+                    "Contact : "
+            ));
+        } else if ("Uttar Pardesh".equals(selectedState)) {
+            templeList.add(new Temple("Shree Digamber Jain Mandir",
+                    "Varanasi, Uttar Pradesh", R.drawable.digamber_jain_mandir,
+                    "https://www.google.com/maps?q=Shree+Digamber+Jain+Mandir+Varanasi+Uttar+Pradesh",
+                    "Address : Varanasi, Uttar Pradesh",
+                    "History : The Shree Digamber Jain Mandir in Varanasi is an important temple for the Digambara sect of Jainism. The temple is renowned for its detailed architecture and sacredness among the Jain community.",
+                    "Contact : "
+            ));
+        } else if ("West Bengal".equals(selectedState)) {
+            templeList.add(new Temple("Rishabhdev Jain Temple",
+                    "Kolkata, West Bengal", R.drawable.rishabhdev_jain,
+                    "https://www.google.com/maps?q=Rishabhdev+Jain+Temple+Kolkata+West+Bengal",
+                    "Address : Kolkata, West Bengal",
+                    "History : The Rishabhdev Jain Temple in Kolkata is dedicated to Lord Rishabhdev, the first Tirthankara. It is known for its vibrant rituals and the architectural beauty of its carvings and sculptures.",
+                    "Contact : "
+            ));
+        } else if ("Tamil Nadu".equals(selectedState)) {
+            templeList.add(new Temple("Shree Adinatha Jain Temple",
+                    "Chennai, Tamil Nadu", R.drawable.adinatha_jain,
+                    "https://www.google.com/maps?q=Shree+Adinatha+Jain+Temple+Chennai+Tamil+Nadu",
+                    "Address : Chennai, Tamil Nadu",
+                    "History : The Shree Adinatha Jain Temple is one of the famous Jain temples in Tamil Nadu. It is dedicated to Lord Adinatha, the first Tirthankara, and is known for its exquisite sculptures and peaceful atmosphere.",
+                    "Contact : "
             ));
         }
+
 
         // Set adapter
             TempleAdapter adapter = new TempleAdapter(this, templeList);

@@ -20,20 +20,23 @@
             android:paddingBottom="10dp"/>
 
         <TextView
+            android:id="@+id/about_intro_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to Jain Tirth Yatra! Our app is dedicated to helping users explore and learn about various Jain pilgrimage sites. We provide information, resources, and services for those interested in Jainism and spiritual journeys."
+            android:text="Loading..."
             android:textSize="16sp"
             android:textAlignment="center"
             android:padding="10dp"/>
 
         <TextView
+            android:id="@+id/about_continue_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stay connected with us as we continue to expand and enhance our offerings."
+            android:text="Loading..."
             android:textSize="16sp"
             android:textAlignment="center"
             android:padding="10dp"/>
+
     </LinearLayout>
 
 </ScrollView>

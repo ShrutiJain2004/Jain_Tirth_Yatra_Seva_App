@@ -1,14 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <TextView
-        android:id="@+id/generatedPlanTextView"
-        android:layout_width="match_parent"
+        android:id="@+id/planHeadingTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:textSize="16sp"
-        android:textColor="#000000"
-        android:text="Generated plan will appear here." />
-</ScrollView>
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:text="Generated Plan"
+        android:layout_marginBottom="8dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/generatedPlanTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text=""/>
+    </ScrollView>
+
+</LinearLayout>
